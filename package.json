@@ -1,0 +1,23 @@
+{
+  "name": "emdad",
+  "version": "1.0.0",
+  "description": "این یک سرویس برای امداد رسانی به زلزله غرب ایران است",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js --exec babel-node --presets es2015,stage-2"    
+  },
+  "author": "Shamdooni Org",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.2",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  }
+}
