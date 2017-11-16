@@ -23,13 +23,13 @@ export class Needs {
     }
 
     postNewNeed(req, res, next) {
-        const { name, title, lat, long, needs } = req.body
+        const { name, title, lat, lng, needs } = req.body
         console.log(req.body)
-        if (!name || !title || !lat || !long || !needs) {
+        if (!name || !title || !lat || !lng || !needs) {
             return res.status(400).json({message: 'پر کردن تمام فیلد ها اجباری است.'})
         } 
         const rescur = { name, title }
-        const location = { lat, long }
+        const location = { lat, lng }
         return NeedsModel.create({
             rescur, location, needs
         }, (err, need) => {

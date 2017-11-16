@@ -12,11 +12,11 @@ export class Camps {
     }
 
     postNewCamp(req, res, next) {
-        const { lat, long } = req.body
-        if (!lat || !long) {
+        const { lat, lng } = req.body
+        if (!lat || !lng) {
             return res.status(400).json({message: 'پر کردن تمام فیلد ها اجباری است.'})
         } 
-        const location = { lat, long }
+        const location = { lat, lng }
         return CampModel.create({
             location
         }, (err, need) => {

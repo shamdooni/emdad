@@ -12,7 +12,7 @@ const NeedsSchema = new Schema({
         type: Object,
         required: true
         // Lat
-        // Long
+        // Lng
     },
     needs: {
         type: String,
