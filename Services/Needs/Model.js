@@ -2,7 +2,23 @@ import mongoose, { Schema } from 'mongoose'
 
 const NeedsSchema = new Schema({
     // Needs Schema Properties
-    test: String
+    rescur: {
+        type: Object,
+        required: true
+        //  Name
+        //  Title
+    },
+    location: {
+        type: Object,
+        required: true
+        // Lat
+        // Long
+    },
+    needs: {
+        type: String,
+        required: true
+        // String    
+    }
 }, {
     timestamps: true
 })
